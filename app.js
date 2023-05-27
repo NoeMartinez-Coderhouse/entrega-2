@@ -16,19 +16,44 @@ const showErrorMsg = () => {
     alert('¡No existen estudiantes cargados!');
 }
 
+function display(text, action) {
+    return function() {
+        action(text);
+    }
+}
+
+function forEachOne(array, action) {
+    for (const e of array) {
+        action(e);
+    }
+}
+
+function sortAsc(array) {
+    return array.sort( (a, b) => a - b );
+}
+
 //Ask for data
 user = prompt('Ingrese su nombre de usuario');
 
 //Conditionals
-if (user == '') {
-    alert('¡El usuario no puede estar vacío!');
+if (user === '') {
+    const emptyUser = display(
+        '¡El usuario no puede estar vacío!',
+        alert);
+    emptyUser();
 } else {
     password = prompt('Ingrese su contraseña');
 
-    if (password == '') {
-        alert('¡La contraseña no puede estar vacía!');
+    if (password === '') {
+        const emptyPass = display(
+            '¡La contraseña no puede estar vacía!',
+            alert);
+        emptyPass();
     } else {
-        alert('¡¡¡Acceso concedido!!!');
+        const hasAccess = display(
+            '¡Felicitaciones ' + user + '! ¡¡¡Acceso concedido!!!',
+            alert);
+        hasAccess();
 
         tope = Number(prompt('¿Cuántos estudiantes quiere ingresar?'));
 
@@ -42,7 +67,10 @@ if (user == '') {
                 student_name = String(prompt('Ingrese el nombre del alumno.'));
 
                 if (student_name === '' || student_name === NaN) {
-                    alert('¡El nombre del alumno no puede estar vacío!');
+                    const emptyName = display(
+                        '¡El nombre del alumno no puede estar vacío!',
+                        alert);
+                    emptyName();
                 } else {
 
                     student = new Student(student_name);
@@ -53,19 +81,26 @@ if (user == '') {
                         note = Number(prompt('Ingrese la nota del alumno.'));
     
                         if (note === '' || note >= 11 || note <= 0 || note === NaN) {
-                            alert('¡La nota del alumno no tiene el formato correcto!');
+                            const emptyNote = display(
+                                '¡La nota del alumno no tiene el formato correcto!',
+                                alert);
+                            emptyNote();
                         } else {
                             student.addNote(note);
                             --n_notes;
                         }
                     }
-                    student.showNotes();
+                    forEachOne(student.notes, console.log);
+                    alert(sortAsc(student.notes));
 
                     is_average = String(prompt('¿Desea calcular su promedio? (Y | N)'));
 
                     if (is_average === 'Y' || is_average === 'y') {
                         let average = student.calculateAverage();
-                        alert('Su promedio es de: ' + average);
+                        const averageAlert = display(
+                            'Su promedio es de: ' + average,
+                            alert);
+                        averageAlert();
                     }
 
                     school.addStudent(student);
