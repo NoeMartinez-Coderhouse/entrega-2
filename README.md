@@ -1,2 +1,1 @@
-# js-project
-# entrega-2
+# SRA: Sistema de Registro de Alumnos | js-project
