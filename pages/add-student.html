@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRA :: Agregar estudiante</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Sistema de Registro de Alumnos</h1>
+        <nav>
+            <ul>
+                <li><a href="./home-page.html">Inicio</a></li>
+                <li><a href="./add-student.html">Ingreso estudiante</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Agregar estudiante</h2>
+        <form id="add-student-form">
+            <input type="text" id="student-name-input" placeholder="Nombre" required> <br>
+            <input type="text" id="student-surname-input" placeholder="Apellido" required> <br>
+            <select name="student-course">
+                <option value="0" selected>Curso</option>
+                <option value="1-a">1º A</option>
+                <option value="1-b">1º B</option>
+                <option value="2-a">2º A</option>
+                <option value="2-b">2º B</option>
+                <option value="3-a">3º A</option>
+                <option value="3-b">3º B</option>
+                <option value="4-a">4º A</option>
+                <option value="4-b">4º B</option>
+                <option value="5-a">5º A</option>
+                <option value="5-b">5º B</option>
+                <option value="6-a">6º A</option>
+                <option value="6-b">6º B</option>
+            </select>
+            <select name="student-shift">
+                <option value="0" selected>Turno</option>
+                <option value="maniana">Mañana</option>
+                <option value="Tarde">Tarde</option>
+            </select> <br>
+            <input type="text" id="student-adress-input" placeholder="Domicilio" required>
+            <br> <br>
+            <input type="submit" id="add-student-btn" value="Agregar">
+        </form>
+        
+        
+
+    </main>
+        
+    </section>
+    <script src="../js/School.js"></script>
+    <script src="../js/Student.js"></script>
+    <script src="../js/home.js"></script>
+</body>
+</html>
