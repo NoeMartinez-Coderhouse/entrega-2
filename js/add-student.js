@@ -10,6 +10,9 @@ function displaySubmitResult(e) {
     let student_name = document.getElementById("student-name-input").value;
     let student_surname = document.getElementById("student-surname-input").value;
 
+    localStorage.setItem('student-name', student_name);
+    localStorage.setItem('student_surname', student_surname);
+
     const studentLoaded = display(
         'Se ha agregado el alumno: ' + student_name + ' ' + student_surname + '.',
         alert);
