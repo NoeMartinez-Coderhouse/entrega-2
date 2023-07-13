@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "name": "Nicole",
+        "surname": "Romero",
+        "course": "6º A",
+        "shift": "Mañana",
+        "address": "Carabobo 2544 dpto 7"
+    },
+    {
+        "id": 2,
+        "name": "Nicolás",
+        "surname": "Romero",
+        "course": "5º B",
+        "shift": "Tarde",
+        "address": "Ecuador 1435"
+    },
+    {
+        "id": 3,
+        "name": "Agustín",
+        "surname": "Martínez",
+        "course": "3º A",
+        "shift": "Mañana",
+        "address": "Rawson 3762"
+    },
+    {
+        "id": 4,
+        "name": "Benjamín",
+        "surname": "Romero",
+        "course": "1º B",
+        "shift": "Tarde",
+        "address": "República del Salvador 5466"
+    },
+    {
+        "id": 5,
+        "name": "Gladys",
+        "surname": "Bustamante",
+        "course": "5º A",
+        "shift": "Mañana",
+        "address": "Arenales 546"
+    },
+    {
+        "id": 6,
+        "name": "Nélida",
+        "surname": "Luca",
+        "course": "3º A",
+        "shift": "Mañana",
+        "address": "Fernández de la Cruz 1723"
+    }
+]
